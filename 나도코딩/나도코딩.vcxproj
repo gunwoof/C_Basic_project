@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="반복문.c" />
+    <ClCompile Include="배열.c" />
     <ClCompile Include="변수,상수,입출력.c" />
     <ClCompile Include="조건문.c" />
     <ClCompile Include="함수.c" />

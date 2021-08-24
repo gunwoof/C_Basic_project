@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main_variouble(void)
+int main_variable(void)
 {
 	//프로잭트
 	//조서작성 : 경찰관이 범죄자의 정보를 입수

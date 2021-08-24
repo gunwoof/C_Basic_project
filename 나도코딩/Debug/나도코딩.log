@@ -1,6 +1,6 @@
-﻿  함수.c
-C:\Users\ASUS\source\repos\나도코딩\나도코딩\함수.c(13,19): warning C4474: 'scanf_s' : 서식 문자열에 전달된 인수가 너무 많습니다.
-C:\Users\ASUS\source\repos\나도코딩\나도코딩\함수.c(13,19): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 2개가 제공되었습니다.
-C:\Users\ASUS\source\repos\나도코딩\나도코딩\함수.c(14,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
-C:\Users\ASUS\source\repos\나도코딩\나도코딩\함수.c(15,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  변수,상수,입출력.c
+  함수.c
+C:\Users\ASUS\source\repos\나도코딩\나도코딩\함수.c(13,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+C:\Users\ASUS\source\repos\나도코딩\나도코딩\함수.c(24): warning C4716: 'main_function': 값을 반환해야 합니다.
   나도코딩.vcxproj -> C:\Users\ASUS\source\repos\나도코딩\Debug\나도코딩.exe
