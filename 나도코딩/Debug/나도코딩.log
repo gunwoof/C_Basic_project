@@ -1,6 +1,4 @@
-﻿  변수,상수,입출력.c
-  함수.c
-C:\Users\ASUS\source\repos\나도코딩\나도코딩\함수.c(13,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  코드를 생성하고 있습니다...
-C:\Users\ASUS\source\repos\나도코딩\나도코딩\함수.c(24): warning C4716: 'main_function': 값을 반환해야 합니다.
+﻿  배열.c
+C:\Users\ASUS\source\repos\나도코딩\나도코딩\배열.c(9,7): warning C4013: 'srand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\ASUS\source\repos\나도코딩\나도코딩\배열.c(10,29): warning C4013: 'rand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
   나도코딩.vcxproj -> C:\Users\ASUS\source\repos\나도코딩\Debug\나도코딩.exe
