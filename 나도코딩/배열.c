@@ -42,8 +42,8 @@ int main(void)
 			}
 		}
 
-		// 사용자에게 문제 표시
-		for(int k = 1; k <= 3; k++) {
+		// 사용자에게 문제 표시   ㅅㅂ왜 안나와!!!!
+		for(int k = 1; k <= 4; k++) {
 			if(bottle[k] == 1) {
 				printf("%d", k); // 보여줄 병 선택
 			}
