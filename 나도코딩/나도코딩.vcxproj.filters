@@ -30,5 +30,8 @@
     <ClCompile Include="배열.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="포인터.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

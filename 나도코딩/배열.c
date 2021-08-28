@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 int main(void) 
@@ -6,7 +7,7 @@ int main(void)
 	//프로잭트
 	//아빠는 대머리 게임
 
-	srand(time(NULL));
+	srand((unsigned int)time(NULL));
 	int treatment_choice = rand() % 4; //발모제 선택
 
 	int Currentbottle = 0; //이번 장면에서 보여주는 병 개수
@@ -43,7 +44,7 @@ int main(void)
 		}
 
 		// 사용자에게 문제 표시   ㅅㅂ왜 안나와!!!!
-		for(int k = 1; k <= 4; k++) {
+		for (int k = 1; k <= 4; k++) {
 			if(bottle[k] == 1) {
 				printf("%d", k); // 보여줄 병 선택
 			}
