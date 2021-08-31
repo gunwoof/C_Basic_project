@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main(void) 
+int main_array(void) 
 {
-	//프로잭트
-	//아빠는 대머리 게임
+	// 프로잭트
+	// 아빠는 대머리 게임
 
 	srand((unsigned int)time(NULL));
 	int treatment_choice = rand() % 4; //발모제 선택
@@ -21,7 +21,7 @@ int main(void)
 		do {
 			Currentbottle = rand() % 2 + 2; // 0~1 -> 2~3
 		} while (Currentbottle == Previousbottle);
-		Currentbottle = Previousbottle; // 조건문이 계속 반복될 조건
+		Previousbottle = Currentbottle; // 조건문이 계속 반복될 조건
 
 		int bottle[4] = { 0,0,0,0 }; //4개의 병
 		int isincluded = 0; // 보여줄 병 중에 발모제가 있는지 여부 (1이면 발모제 포함)

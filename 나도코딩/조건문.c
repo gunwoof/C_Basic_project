@@ -3,8 +3,8 @@
 
 int main_conditional(void) {
 
-	//프로잭트
-	//up & down game
+	// 프로잭트
+	// up & down game
 
 	srand(time(NULL));
 	int i = rand() % 100 + 1; //1부터 100까지 숫자

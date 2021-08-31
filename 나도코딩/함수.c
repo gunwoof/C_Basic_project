@@ -7,8 +7,8 @@ void Printnumber(int level, int num1, int num2);
 void Correct_conditional(int num1, int num2, int answer);
 
 int main_function(void) {
-	//프로잭트
-	//비밀번호 해제(점점 더 어려운 문제 풀기)
+	// 프로잭트
+	// 비밀번호 해제(점점 더 어려운 문제 풀기)
 	
 	srand(time(NULL));
 	for (int i = 1; i <= 5; i++) {
