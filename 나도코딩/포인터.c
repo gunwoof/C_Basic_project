@@ -1,14 +1,16 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 
 int level; 
 int fishPot[6]; 
 int * cursor;
+
 void initData();
 void printFishes();
 void decreaseWater(long previousTime);
-
+int checkFishAlive();
 
 int main(void) {
 	
@@ -23,22 +25,25 @@ int main(void) {
 	long previousTime = 0; // 직전 것 경과 시간(최근의 물을 준 시간 간격)
 
 	int num = 0; // 몇 번 어항에 물을 줄 것인지, 사용자 입력
-	initData();
+	initData(); //레벨지정, 어항만들기
 
 	cursor = fishPot;
 
 	startTime = clock(); // 현재시간은 1/1000초로 반환
 
-	while(1) {
-	printFishes();
-	printf("몇 번 어항에 물을 주시겠어요?");
-	scanf_s("%d", &num);
+	// 무한 루프
+	while(1) {  
+	printFishes(); // 숫자와 어항 보여줌
+	printf("\n 몇 번 어항에 물을 주시겠어요?\n");
+	scanf_s("%d", &num); // 사용자 번호 입력
+	printf("\n");
 
 	// 입력값 체크
 	if (num < 1 || num > 6) {
 		printf("\n입력값이 잘못되었습니다!\n");
 		continue;
 	}
+
 	// 총 경과 시간
 	totalTime = (clock() - startTime) / CLOCKS_PER_SEC;
 	printf("총 경과시간은 %ld초\n", totalTime);
@@ -61,12 +66,31 @@ int main(void) {
 		cursor[num - 1] += 1;
 	}
 
-	// 레벨 업
-	if()
+	// 레벨 업 (20초마다 한번씩 수행)
+	if (totalTime / 20 > level - 1) {
+		level++;
+		printf("\n\n####level up입니다. %d라운드####\n\n", level);
+		
+		// 최종 level 5
+		if (level == 5) {
+			printf("\n\n###축하합니다. 게임을 클리어 하였습니다###\n\n");
+			exit(0);
+		}
 	}
 
-	
+	// 물고기가 죽었는지 확인    
+	if (checkFishAlive() == 0) {
+		printf("\n\n\n\n###물고기가 모두 뒤졌습니다ㅜㅜ###\n\n\n\n\n\n\n\n"); // 물고기 모두 뒤짐
+		exit(0);
 	}
+	else if(checkFishAlive() == 1){
+		printf("\n물고기가 아직 살아 있어요!\n\n\n\n\n\n\n\n"); // 물고기가 한마리라도 살아 있음
+	}
+
+	// 다음 시간을 재기위한 기준점
+	previousTime = totalTime; 
+	}
+}
 
 void initData() {
 	level = 1; // 게임 레벨(1~5)
@@ -91,4 +115,13 @@ void decreaseWater(long previousTime) {
 			fishPot[i] = 0;
 		}
 	}
+}
+
+int checkFishAlive() {
+	for (int i = 0; i < 6; i++) {
+		if (fishPot[i] > 0) {
+			return 1; // 물이 있다 (어항이 한개라도 살아있으면 1이 반환 because return값이 반환 되는 순간 함수가 종료됨)
+		}
+	}
+	return 0; // 물이 없다
 }
