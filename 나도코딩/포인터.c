@@ -12,7 +12,7 @@ void printFishes();
 void decreaseWater(long previousTime);
 int checkFishAlive();
 
-int main(void) {
+int main_pointer(void) {
 	
 	// 프로잭트
 	// 물고기 키우기
