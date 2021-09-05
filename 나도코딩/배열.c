@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main_array(void) 
+int main_array(void)
 {
 	// 프로잭트
 	// 아빠는 대머리 게임

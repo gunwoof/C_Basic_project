@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 
+int allAnimalcard[4][5]; // 카드 지도 20장
+char * strAnimal[10];
+
+void initAnimalArray();
+void initAnimalName();
+
 int main(void) {
 	
 	// 프로잭트
@@ -12,5 +18,20 @@ int main(void) {
 	// 총 실패 횟수 알려주기
 
 	srand(time(NULL));
+
+	initAnimalArray();
+	initAnimalName();
+
+}
+
+void initAnimalArray() {
+	for (int i; i < 4; i++) {
+		for (int j; j < 5; j++) {
+			allAnimalcard[4][5] = -1;
+		}
+	}
+}
+
+void initAnimalName() {
 
 }
