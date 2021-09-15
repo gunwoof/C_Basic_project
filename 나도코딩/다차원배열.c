@@ -14,6 +14,7 @@ void printQuestion();
 int getEmptyPosition();
 int convert_position_x();
 int convert_position_y();
+int foundAllAnimals();
 
 int main(void) {
 
@@ -39,7 +40,7 @@ int main(void) {
 
 		printAnimals(); // 동물 위치 출력
 		printQuestion(); // 문제 출력(카드 지도)
-		printf("뒤집을 카드를 2개 고르세요 : ");
+		printf("\n뒤집을 카드를 2개 고르세요 : ");
 		scanf_s("%d %d", &select1, &select2);
 
 		// 같은 카드 선택시 무효처리
@@ -80,15 +81,17 @@ int main(void) {
 
 		// 모든 동물을 찾았는지 여부 (참 : 1, 거짓 : 0)
 		if (foundAllAnimals() == 1) {
-
+			printf("\n\n 축하합니다 ! 모든 동물을 다 찾았습니다 \n");
+			printf("지금까지 총 %d번 실수 하였습니다\n", failCount);
+			break;
 		}
 
 	}
 }
 
 void initAnimalArray() {
-	for (int i; i < 4; i++) {
-		for (int j; j < 5; j++) {
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 5; j++) {
 			allAnimalcard[i][j] = -1;
 		}
 	}
@@ -183,9 +186,9 @@ void printQuestion() {
 			else {
 				printf("%8d", seq);
 			}
-
-
+			seq++;
 		}
+		printf("\n");
 	}
 }
 
