@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int allAnimalcard[4][5]; // 카드 카드 20장 (4행 5열)
+int allAnimalcard[4][5]; // 카드 20장 (4행 5열)
 char * strAnimal[10];
 int checkAnimal[4][5]; // 뒤집혔는지 여부 확인
 
@@ -65,8 +65,8 @@ int main(void) {
 			allAnimalcard[firstSelect_x][firstSelect_y] == allAnimalcard[secondSelect_x][secondSelect_y] // 첫번째 선택과 두번째 선택의 카드가 같으면
 			) {
 			printf("\n\n 빙고! : %s발견\n\n", strAnimal[allAnimalcard[firstSelect_x][firstSelect_y]]);
-			allAnimalcard[firstSelect_x][firstSelect_y] = 1;
-			allAnimalcard[secondSelect_x][secondSelect_y] = 1;
+			checkAnimal[firstSelect_x][firstSelect_y] = 1;
+			checkAnimal[secondSelect_x][secondSelect_y] = 1;
 		}
 
 		// 다른 동물일 경우
@@ -117,7 +117,7 @@ void shuffleAnimal() {
 			int x = convert_position_x(pos); // x좌표
 			int y = convert_position_y(pos); // y좌표
 
-			allAnimalcard[i][j] = i;
+			allAnimalcard[x][y] = i;
 		}
 	}
 }
@@ -174,6 +174,10 @@ void printAnimals() {
 void printQuestion() {
 	printf("\n\n문제\n\n");
 
+	// 0  1  2  3  4 
+	// 5  기린  7  8  9
+	// 10 11 기린 13 14 
+	// 15 16 17 18 19
 	int seq = 0;
 
 	for (int i = 0; i < 4; i++) {
