@@ -16,7 +16,7 @@ int convert_position_x();
 int convert_position_y();
 int foundAllAnimals();
 
-int main(void) {
+int main_multidimentionalArray(void) {
 
 	// 프로잭트
 	// 동물 뒤집기
